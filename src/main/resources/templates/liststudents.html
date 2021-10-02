@@ -1,0 +1,13 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></head>
+<body>
+<h1 align="center">Liste des Etudiant</h1>
+<ul>
+<li th:each="etudiant : ${students}" th:text="${etudiant}"></li>
+</ul>
+<table class="table" align="center" border="1">
+<tr><th>#</th><th>nom</th><th>email</th></tr>
+<tr th:each="etudiant : ${students}"><td th:text="${etudiant.id}"></td><td th:text="${etudiant.nom}"></td><td th:text="${etudiant.email}"></td></tr></table>
+</body>
+</html>
