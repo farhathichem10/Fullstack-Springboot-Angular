@@ -1,13 +1,14 @@
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></head>
-<body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" type=text/css th:href="@{/css/main.css}">
 <h1 align="center">Liste des Etudiant</h1>
 <ul>
 <li th:each="etudiant : ${students}" th:text="${etudiant}"></li>
 </ul>
+<h3>pour ajouter un etudiant cliquer <a th:href="@{/etudiant/add}" >ici</a> </h3>
 <table class="table" align="center" border="1">
-<tr><th>#</th><th>nom</th><th>email</th></tr>
-<tr th:each="etudiant : ${students}"><td th:text="${etudiant.id}"></td><td th:text="${etudiant.nom}"></td><td th:text="${etudiant.email}"></td></tr></table>
+<tr><th>#</th><th>nom</th><th>email</th> <th>modifier</th><th>supprimer</th></tr>
+<tr th:each="etudiant : ${students}"><td th:text="${etudiant.id}"></td><td th:text="${etudiant.nom}"></td><td th:text="${etudiant.email}"></td><<td><a href="" class="btn btn-warning"/>modifier</a></td><td><a href="" class="btn btn-danger">supp</a></td>/tr></table>
 </body>
 </html>
